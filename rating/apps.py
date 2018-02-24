@@ -1,0 +1,9 @@
+# -*- coding: utf-8 -*-
+from __future__ import unicode_literals
+
+from django.apps import AppConfig
+
+
+class RatingConfig(AppConfig):
+    name = 'rating'
+    verbose_name = 'Раздел рейтинга для исполнителей'
