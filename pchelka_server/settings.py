@@ -119,7 +119,12 @@ USE_TZ = True
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.AllowAny',
-    )
+    ),
+
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.BasicAuthentication'
+    ),
 }
 
 ACCOUNT_EMAIL_VERIFICATION = 'none'
@@ -173,4 +178,3 @@ STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "pchelka_server", "static"
 STATICFILES_DIRS = (
     os.path.join(os.path.dirname(BASE_DIR), "pchelka_server", "templates", "assets", "static_files"),
 )
-
